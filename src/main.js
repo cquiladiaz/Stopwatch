@@ -30,8 +30,10 @@ function stopChronometrer(){
 
 function resetChronometrer(){
     stopChronometrer();
+    fractionValue = 0;
     secondsValue = 0;
     minutesValue = 0;
+    fractionSpan.textContent = '00';
     minutesSpan.textContent = '00';
     secondsSpan.textContent = '00'; 
 } 
