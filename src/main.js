@@ -1,19 +1,27 @@
 const secondsSpan = document.querySelector('#seconds');
 const minutesSpan = document.querySelector('#minutes');
+const fractionSpan = document.querySelector('#fraction')
 let secondsValue = 0;
 let minutesValue = 0;
+let fractionValue = 0;
 let currentChronometrer;
 
 function startChronometrer(){
     currentChronometrer = setInterval(() =>{
-        secondsValue = secondsValue + 1;
+        fractionValue = fractionValue + 1;
+        if(fractionValue === 100){
+            fractionValue = 0;
+            secondsValue = secondsValue + 1;
+            secondsSpan.textContent = formatValue(secondsValue);
+        }
+        fractionSpan.textContent = formatValue(fractionValue);
+        
         if(secondsValue === 60){
             secondsValue = 0;
             minutesValue = minutesValue + 1;
             minutesSpan.textContent = formatValue(minutesValue);
         }
-        secondsSpan.textContent = formatValue(secondsValue);
-    }, 1000);
+    }, 10);
 }
 
 function stopChronometrer(){
