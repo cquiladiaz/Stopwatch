@@ -9,14 +9,24 @@
 html{
     font-size: 62.5%;
 }
+button{
+    cursor: pointer;
+    background-color:transparent;
+    border: none;
+}
 body{
+    height: 100vh;
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: var(--bg-color);
     font-family: 'Roboto', sans-serif;
+    text-align: center;
     color: #ffff;
 }
 header{
-    position: absolute;
-    top: 0;
     width: 100%;
 }
 .header-list{
@@ -24,28 +34,48 @@ header{
     justify-content: space-between;
     width: 100%;
     list-style: none;
-    padding: 10px;
+    padding: 30px;
 }
 .header-button{
-    width: 200px;
-    height: 50px;
-    background-color: transparent;
-    border: 1px solid gray;
+    width: 60px;
+    height: 60px;
+    border: 2px solid gray;
+    border-radius: 50%;
+    font-size: 2rem;
+    color: #ffff;
+}
+.hero-time p{
+    font-size: 6rem;
+}
+.hero-time p>span:last-child{
+    font-size: 3rem;
+}
+.hero-buttons{
+    margin-top: 2rem;
+}
+.hero-buttons button:nth-child(1){
+    background-color: #00c49a;
+    margin-right: 10px;
+}
+.hero-buttons button:nth-child(2){
+    background-color:#ef476f;
+    margin-right: 10px;
+}
+.hero-buttons button:nth-child(3){
+    background-color:#9197ae;
+}
+.hero-button{
+    width: 70px;
+    height: 30px;
+    font-size: 1.8rem;
     border-radius: 10px;
     color: #ffff;
 }
-main{
-    width: 100%;
-    position: absolute;
-    top: 50%;
+footer{
+    height: 34px;
+    padding: 8px;
+    font-size: 1.6rem;
+    background-color: #393e41;
 }
-.hero{
-    text-align: center;
-    width: 100%;
-}
-.hero-title{
-    font-size: 2.6rem;
-}
-.hero-time{
-    font-size: 2rem;
-}
+
+
