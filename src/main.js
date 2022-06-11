@@ -5,8 +5,11 @@ let secondsValue = 0;
 let minutesValue = 0;
 let fractionValue = 0;
 let currentChronometrer;
+let currentButton;
 
 function startChronometrer(){
+    currentButton = event.target;
+    currentButton.disabled = true; 
     currentChronometrer = setInterval(() =>{
         fractionValue = fractionValue + 1;
         if(fractionValue === 100){
@@ -18,13 +21,16 @@ function startChronometrer(){
         
         if(secondsValue === 60){
             secondsValue = 0;
-            minutesValue = minutesValue + 1;
+            minutesValue = minutesValue + 1 ;
             minutesSpan.textContent = formatValue(minutesValue);
         }
     }, 10);
 }
 
 function stopChronometrer(){
+    if(currentButton){
+        currentButton.disabled = false;
+    }
     clearInterval(currentChronometrer);
 }
 
