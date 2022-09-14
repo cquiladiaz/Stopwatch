@@ -1,5 +1,5 @@
 :root{
-    --bg-color: #121f3d
+    --bg-color: #121f3d;
 }
 *{
     padding: 0;
@@ -15,6 +15,10 @@ button{
     border: none;
 }
 body{
+    background: gray;
+    font-family: 'Roboto', sans-serif;
+}
+.content{
     height: 100vh;
     max-width: 700px;
     margin: 0 auto;
@@ -22,7 +26,6 @@ body{
     flex-direction: column;
     justify-content: space-between;
     background-color: var(--bg-color);
-    font-family: 'Roboto', sans-serif;
     text-align: center;
     color: #ffff;
 }
